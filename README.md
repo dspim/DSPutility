@@ -9,7 +9,7 @@ Common utilities developed by DSP inc.
 	    1. Crete logger using different log file.
 	    2. Identical log file shared by multiple `log` instances (in same module scope) won't create multiple file handler for multiple write.
         - usseage
-            ```python
+            ```python=
             from DSPlogging import log
 
             logName = logPath=os.path.basename(__file__)
@@ -29,4 +29,4 @@ Common utilities developed by DSP inc.
             @myLog2.errlog(logName)
             def func2(x):
 	        return x/0
-        ```
+            ```
