@@ -4,11 +4,11 @@ Common utilities developed by DSP inc.
 
 * packages  
     + DSPlogging  
-        A loggin decorator keeps logging functions' error messeages
-	- features
-	    1. Crete logger using different log file.
-	    2. Identical log file shared by multiple `log` instances (in same module scope) won't create multiple file handler for multiple write.
-        - usseage
+        A loggin decorator keeps logging functions' error messeages  
+	- features  
+	    1. Crete logger using different log file  
+	    2. Identical log file shared by multiple `log` instances (in same module scope) won't create multiple file handler for multiple write  
+        - usseage  
             ```python
             from DSPlogging import log
 
@@ -28,5 +28,4 @@ Common utilities developed by DSP inc.
             def func2(x):
 	    	"won't cause multiple handler problem"
 		return x/0
-		
-            ```
+            ```  
