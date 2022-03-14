@@ -15,4 +15,8 @@ Common utilities developed by DSP inc.
             logName = logPath=os.path.basename(__file__)
             myLog = log(logPath=logName)
             myLog2 = log(logPath=logName)
+	    	    
+            @myLog.errlog(logName)
+            def func1(x):
+	        return x/0
             ```
