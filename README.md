@@ -18,14 +18,14 @@ Common utilities developed by DSP inc.
 	    	    
             @myLog.errlog(logName)
             def func1(x):
-	            return x/0
+	    	return x/0
 
             @myLog.errlog(logName)
             async def afunc1():
-	            open('not exist', 'r')
+	    	open('not exist', 'r')
 
             @myLog2.errlog(logName)
             def func2(x):
-	    "won't cause multiple handler problem"
-	            return x/0
+	    	"won't cause multiple handler problem"
+		return x/0
             ```
