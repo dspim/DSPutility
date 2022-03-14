@@ -24,7 +24,7 @@ Common utilities developed by DSP inc.
             async def afunc1():
 	        open('not exist', 'r')
 
-	    \# won't cause multiple handler problem
+	    """won't cause multiple handler problem"""
             @myLog2.errlog(logName)
             def func2(x):
 	        return x/0
