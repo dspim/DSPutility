@@ -6,9 +6,9 @@ import os
 class log:
     """Log initiate a global lgging instance, and keep all runtime error in log file
     """
-    def __init__(self, logPath:str = 'error.log', excInfo:bool = False, 
-                       headLines:str = '| Time                  | User                    | Level  | Messeage\n'+\
-                                   '|-----------------------|-------------------------|--------|--------------------------------------------------\n'):
+    def __init__(self, logPath:str='error.log', excInfo:bool=False, 
+                       headLines:str='| Time                  | User                    | Level  | Messeage\n'+\
+                                     '|-----------------------|-------------------------|--------|--------------------------------------------------\n'):
         """Construction setting for log instance
 
         :param logPath: File name (including path) of log file, defaults to 'error.log'
@@ -40,7 +40,7 @@ class log:
         #                     format='|{asctime}|{name:25s}|{levelname:8s}|{message}', style='{',
         #                     level=logging.ERROR)
 
-    def readLog(self, skipLine:Optional[int] = None, skipChar:int = 0) -> str:
+    def readLog(self, skipLine:Optional[int]=None, skipChar:int=0) -> str:
         """Return content of log file but start from StartLine and skip first skipChar chars for each line.
 
         :param startLine: Start, defaults to self.nHeadLines 
@@ -52,7 +52,7 @@ class log:
             content = "".join([ line[skipChar:] for line in rf][skipLine:])
         return content
             
-    def errlog(self, path:str = '') -> callable(object):
+    def errlog(self, path:str='') -> callable(object):
         """Return a decorator which log exceptions when executing wrapped function 
 
         :param path: File name (including path) where decorated function locate , defaults to ''

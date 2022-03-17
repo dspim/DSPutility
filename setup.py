@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="DSPutility",
-    version="0.0.7",
+    version="0.0.8",
     author="bonzo",
     author_email="bonzo.yang@dsp.im",
     description="DSP utility collection",
@@ -18,5 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    install_requires=['sqlalchemy'],
+    packages=find_packages(include=['dsputility', 'dsputility.*']),
     python_requires='>=3.8',
 )
