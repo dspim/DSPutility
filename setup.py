@@ -12,13 +12,12 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dspim/DSPutility",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(include=['dsputility', 'dsputility.*']),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     install_requires=['sqlalchemy'],
-    packages=find_packages(include=['dsputility', 'dsputility.*']),
     python_requires='>=3.8',
 )
