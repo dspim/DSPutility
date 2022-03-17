@@ -40,9 +40,6 @@ A simple interface to setup user, password, host and establish an DB engine
 * ussage
 ```python
 from DSPutility.DSPdbInterface import dbintf
-logName = logPath=os.path.basename(__file__)
-myLog = log(logPath=logName)
-myLog2 = log(logPath=logName)
 intf = dbintf(db_name='data', user='postgres', password='password', host='localhost', port='5432', vendor:str='postgresql')
 # this will setup intf.engine as an instance of
 # sqlalchemy.create_engine(f"postgresql://postgres:password@localhost:5432/data")
