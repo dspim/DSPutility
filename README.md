@@ -3,20 +3,35 @@ DSP utility packages
 Common utilities developed by DSP inc.
 
 # packages  
-1. DSPlogging  
-2. DSPdbInterface
+1. log  
+2. dbintf  
 
-## DSPlogging
+## log
 A loggin decorator keeps logging functions' error messeages  
 
 * features  
     1. Crete logger using different log file  
     2. Identical log file shared by multiple `log` instances (in same module scope) won't create multiple file handler for multiple write  
-* usseage  
+* import package
 ```python
-from DSPutility.DSPlogging import log
-logName = logPath=os.path.basename(__file__)
-myLog = log(logPath=logName)
+from dsputility import log
+instance = log()
+```
+```python
+from dsputility.log import log
+instance = log()
+```
+```python
+import dsputility as du
+instance = du.log()
+```
+* usseage  
+
+```python
+from dsputility import log
+
+logName = os.path.basename(__file__)
+myLog = log(logPath=logName) 
 myLog2 = log(logPath=logName)
 
 @myLog.errlog(logName)
@@ -33,13 +48,27 @@ def func2(x):
     return x/0
 ```
 
-## DSPlogging
+## dbintf
 A simple interface to setup user, password, host and establish an DB engine
 * features
     1. Setup an attribute `engine` contain an DB engine established by `sqlalchemy`
-* ussage
+* import package
 ```python
-from DSPutility.DSPdbInterface import dbintf
+from dsputility import dbintf
+instance = dbintf()
+```
+```python
+from dsputility.dbintf import dbintf
+instance = dbintf()
+```
+```python
+import dsputility as du
+instance = du.dbintf()
+```
+* usseage  
+
+```python
+from dsputility import dbintf
 intf = dbintf(db_name='data', user='postgres', password='password', host='localhost', port='5432', vendor:str='postgresql')
 # this will setup intf.engine as an instance of
 # sqlalchemy.create_engine(f"postgresql://postgres:password@localhost:5432/data")
