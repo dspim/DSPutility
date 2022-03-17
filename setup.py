@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="DSPutility", #
-    version="0.0.1",
+    name="DSPutility",
+    version="0.0.7",
     author="bonzo",
     author_email="bonzo.yang@dsp.im",
     description="DSP utility collection",
