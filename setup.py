@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="DSPutility",
-    version="0.0.16",
+    version="0.0.17",
     author="bonzo",
     author_email="bonzo.yang@dsp.im",
     description="DSP utility collection",

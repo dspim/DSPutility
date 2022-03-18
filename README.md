@@ -47,32 +47,3 @@ def func2(x):
     "won't cause multiple handler problem"
     return x/0
 ```
-
-## dbintf
-A simple interface to setup user, password, host and establish an DB engine
-* features
-    1. Setup an attribute `engine` contain an DB engine established by `sqlalchemy`
-* import package
-```python
-from dsputility import dbintf
-instance = dbintf()
-```
-```python
-from dsputility.dbintf import dbintf
-instance = dbintf()
-```
-```python
-import dsputility as du
-instance = du.dbintf()
-```
-* usseage  
-
-```python
-from dsputility import dbintf
-intf = dbintf(db_name='data', user='postgres', password='password', host='localhost', port='5432', vendor:str='postgresql')
-# this will setup intf.engine as an instance of
-# sqlalchemy.create_engine(f"postgresql://postgres:password@localhost:5432/data")
-
-# after setup intf, you can do database operations through intf.engine, such as
-intf.engine.connect()
-```
