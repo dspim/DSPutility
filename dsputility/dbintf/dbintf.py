@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 class dbintf:
     """dbintf setup database connection info and establish an DB engine
     """
-    def __init__(db_name:str, user:str='postgres', password:str='password', host:str='localhost', port:str='5432', vendor:str='postgresql'):
+    def __init__(self, db_name:str, user:str='postgres', password:str='password', host:str='localhost', port:str='5432', vendor:str='postgresql'):
         """Setup database connection and establish an DB engine
 
         :param db_name: database name
