@@ -17,4 +17,4 @@ class dbintf:
         self.user, self.password = user, password
         self.host, self.port, self.vendor = host, port, vendor
         self.sqlalchemy_url = f"{self.vendor}://{self.user}:{self.password}@{self.host}:{self.port}/{self.db_name}"
-        self.engine = create_engine(SQLALCHEMY_DATABASE_URL)
+        self.engine = create_engine(self.sqlalchemy_url)
